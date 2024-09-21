@@ -1,6 +1,6 @@
 namespace SpaceInviders;
 
-class GameSettings
+public class GameSettings
 {
     public int ConsoleWidth { get; set; } = 80;
     public int ConsoleHeight { get; set; } = 30;
@@ -29,7 +29,7 @@ class GameSettings
     public int GroundStartYCoordinate { get; set; } = 20;
 
     public char Ground { get; set; } = 'П';
-    public int NUmberOfGroundRows { get; set; } = 1;
+    public int NumberOfGroundRows { get; set; } = 1;
     public int NumberOfGroundColls { get; set; } = 80;
     
     //------------------------------------------
