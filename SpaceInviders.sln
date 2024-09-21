@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spaceInviders", "spaceInviders\spaceInviders.csproj", "{3D1D36E3-8A77-4452-BD73-FAED7A14292B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceInviders", "SpaceInviders\SpaceInviders.csproj", "{EDD200C1-41EE-4174-93A0-AF046F9C361C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3D1D36E3-8A77-4452-BD73-FAED7A14292B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D1D36E3-8A77-4452-BD73-FAED7A14292B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D1D36E3-8A77-4452-BD73-FAED7A14292B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D1D36E3-8A77-4452-BD73-FAED7A14292B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD200C1-41EE-4174-93A0-AF046F9C361C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD200C1-41EE-4174-93A0-AF046F9C361C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD200C1-41EE-4174-93A0-AF046F9C361C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD200C1-41EE-4174-93A0-AF046F9C361C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
