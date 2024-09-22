@@ -2,12 +2,12 @@ using SpaceInviders.GameObjectFactories;
 
 namespace SpaceInviders;
 
-class Scene
+public class Scene
 {
-    private List<GameObject> _swarm;
-    private List<GameObject> _ground;
-    private GameObject _playerShip;
-    private List<GameObject> _playerShipMissle;
+    public List<GameObject> swarm;
+    public List<GameObject> ground;
+    public GameObject playerShip;
+    public List<GameObject> playerShipMissle;
     private GameSettings _gameSettings;
 
     //Singletone pattern
@@ -17,9 +17,9 @@ class Scene
     private Scene(GameSettings gameSettings)
     {
         _gameSettings = gameSettings;
-        _swarm = new AlienShipFactory(_gameSettings).GetSwarm();
-        _ground = new GroundFactory(_gameSettings).GetGround();
-        _playerShip = new PlayerShipFactory(_gameSettings).GetGameObject();
+        swarm = new AlienShipFactory(_gameSettings).GetSwarm();
+        ground = new GroundFactory(_gameSettings).GetGround();
+        playerShip = new PlayerShipFactory(_gameSettings).GetGameObject();
     }
 
     public static Scene getScene(GameSettings gameSettings)
