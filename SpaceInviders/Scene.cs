@@ -20,6 +20,8 @@ public class Scene
         swarm = new AlienShipFactory(_gameSettings).GetSwarm();
         ground = new GroundFactory(_gameSettings).GetGround();
         playerShip = new PlayerShipFactory(_gameSettings).GetGameObject();
+        playerShipMissle = new List<GameObject>(); 
+
     }
 
     public static Scene getScene(GameSettings gameSettings)
@@ -31,5 +33,5 @@ public class Scene
 
         return _scene;
     }
-
+    
 }

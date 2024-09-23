@@ -22,7 +22,8 @@ class AlienShipFactory : GameObjectFactory
     public List<GameObject> GetSwarm()
     {
         List<GameObject> swarm = new List<GameObject>();
-        int startX = GameSettings.SwarmStartXCoordinate;
+
+        int startX = (GameSettings.ConsoleWidth - GameSettings.NumberOfSwarmColls) / 2;
         int startY = GameSettings.SwarmStartYCoordinate;
 
         for (int y = 0; y < GameSettings.NUmberOfSwarmRows; y++)
@@ -40,4 +41,5 @@ class AlienShipFactory : GameObjectFactory
         }
         return swarm;
     }
+
 }

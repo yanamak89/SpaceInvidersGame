@@ -10,8 +10,8 @@ public class SceneRender
 
     public SceneRender(GameSettings gameSettings)
     {
-        _screenWidth = gameSettings.ConsoleWidth + 1;
-        _screenHight = gameSettings.ConsoleHeight + 1;
+        _screenWidth = gameSettings.ConsoleWidth;
+        _screenHight = gameSettings.ConsoleHeight;
         _screenMatrix = new char[gameSettings.ConsoleHeight, gameSettings.ConsoleWidth];
 
         Console.WindowHeight = gameSettings.ConsoleHeight;
@@ -23,27 +23,28 @@ public class SceneRender
 
     public void Render(Scene scene)
     {
-        Console.SetCursorPosition(0,0);
+        Console.Clear();
+        ClearScreen();
+        
+        Console.SetCursorPosition(0, 0);
         AddListRendering(scene.swarm);
         AddListRendering(scene.ground);
         AddListRendering(scene.playerShipMissle);
-        
+    
         AddGameObjectForRendering(scene.playerShip);
 
         StringBuilder stringBuilder = new StringBuilder();
-        for (int y = 0; y < _screenHight; y++)
+        for (int y = 0; y < _screenHight; y++) 
         {
-            for (int x = 0; x < _screenWidth; x++)
+            for (int x = 0; x < _screenWidth; x++) 
             {
                 stringBuilder.Append(_screenMatrix[y, x]);
             }
-
             stringBuilder.Append(Environment.NewLine);
         }
 
         Console.WriteLine(stringBuilder.ToString());
-        Console.SetCursorPosition(0,0);
-
+        Console.SetCursorPosition(0, 0);
     }
     
     public void AddGameObjectForRendering(GameObject gameObject)
@@ -56,7 +57,7 @@ public class SceneRender
         }
         else
         {
-            _screenMatrix[gameObject.GameObjectPlace.YCoordinate, gameObject.GameObjectPlace.XCoordinate] = ' ';
+            ; //_screenMatrix[gameObject.GameObjectPlace.YCoordinate, gameObject.GameObjectPlace.XCoordinate] = ' ';
         }
     }
 
@@ -66,5 +67,26 @@ public class SceneRender
         {
             AddGameObjectForRendering(gameObject);
         }
+    }
+
+    public void ClearScreen()
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int y = 0; y < _screenHight; y++) 
+        {
+            for (int x = 0; x < _screenWidth; x++)
+            {
+                _screenMatrix[y, x] = ' ';
+            }
+        }
+        Console.SetCursorPosition(0, 0);
+        
+    }
+
+    public void RenderGameOver()
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.Append("Game   Ower!!!!!");
+        Console.WriteLine(stringBuilder.ToString());
     }
 }
